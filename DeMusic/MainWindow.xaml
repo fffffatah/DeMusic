@@ -15,21 +15,10 @@
         </Border.Effect>
         <Grid Background="Black">
             <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="97" Margin="0,597,0,-0.4" VerticalAlignment="Top" Width="1138" Background="#FF1A1A1A">
-                <Button x:Name="playPauseButton" Content="" Canvas.Left="566" Canvas.Top="2" Width="49" Height="51" Click="playPauseOnClick" ClickMode="Release" BorderThickness="0" Cursor="Hand" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5">
-                    <Button.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform ScaleX="-1"/>
-                            <SkewTransform/>
-                            <RotateTransform/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Button.RenderTransform>
+                <Button x:Name="prevButton" Content="" Canvas.Left="508" Width="33" Canvas.Top="15" Click="prevButtonOnClick" Height="27" BorderThickness="0" Cursor="Hand">
                     <Button.Background>
-                        <ImageBrush ImageSource="Assets/playButtonIcon.png"/>
+                        <ImageBrush ImageSource="Assets/prevNextButtonIcon.png"/>
                     </Button.Background>
-                    <Button.BorderBrush>
-                        <ImageBrush ImageSource="Assets/playButtonIcon.png"/>
-                    </Button.BorderBrush>
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="LightBlue" />
@@ -50,6 +39,41 @@
                         </Style>
                     </Button.Style>
                 </Button>
+                <Button x:Name="nextButton" Content="" Canvas.Left="638" Canvas.Top="14" Width="33" Click="nextButtonOnClick" Height="29" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/prevNextButtonIcon.png"/>
+                    </Button.Background>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Image x:Name="playButtonImage" Height="40" Canvas.Left="572" Canvas.Top="10" Width="40" Source="Assets/playButtonIcon.png"/>
+                <Image x:Name="pauseButtonImage" Height="40" Canvas.Left="572" Canvas.Top="10" Width="40" Source="Assets/pauseButtonIcon.png" Visibility="Hidden"/>
+                <Button x:Name="playPauseButton" Content="" Canvas.Left="572" Canvas.Top="10" Width="40" BorderThickness="0" Height="40" Opacity="0" Click="playPauseOnClick" Cursor="Hand"/>
             </Canvas>
             <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="197" Background="#FF121212">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
@@ -58,6 +82,8 @@
                         <ImageBrush ImageSource="Assets/topRightLogo.png"/>
                     </Image.OpacityMask>
                 </Image>
+                <ListBox x:Name="playlistListBox" Height="361" Canvas.Top="194" Width="197" BorderThickness="0" Background="#FF121212"/>
+                <Label x:Name="playlistListBoxToplabel" Content="PLAYLISTS" Canvas.Top="162" Foreground="#FF535353" Height="27" Width="197" FontFamily="Global Sans Serif" FontSize="10"/>
             </Canvas>
             <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" >
                 <Button.Style>

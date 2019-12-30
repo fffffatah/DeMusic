@@ -31,6 +31,24 @@ namespace DeMusic
 
         private void playPauseOnClick(object sender, RoutedEventArgs e)
         {
+            if (playButtonImage.Visibility==Visibility.Visible)
+            {
+                playButtonImage.Visibility = Visibility.Hidden;
+                pauseButtonImage.Visibility = Visibility.Visible;
+            }
+            else if(pauseButtonImage.Visibility==Visibility.Visible)
+            {
+                playButtonImage.Visibility = Visibility.Visible;
+                pauseButtonImage.Visibility = Visibility.Hidden;
+            }
+        }
+        private void prevButtonOnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void nextButtonOnClick(object sender, RoutedEventArgs e)
+        {
 
         }
     }

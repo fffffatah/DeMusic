@@ -106,5 +106,11 @@
   <ItemGroup>
     <Resource Include="Assets\playButtonIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\prevNextButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\pauseButtonIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
