@@ -25,6 +25,7 @@
             </Canvas>
             <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" />
             <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1038,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release" BorderThickness="0"/>
+            <Rectangle x:Name="windowDragger" Fill="Black" HorizontalAlignment="Left" Height="29" Margin="202,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="836" MouseDown="windowsDrag"/>
 
         </Grid>
     </Border>
