@@ -14,17 +14,93 @@
                           ShadowDepth="3" />
         </Border.Effect>
         <Grid Background="Black">
-            <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="97" Margin="0,597,0,-0.4" VerticalAlignment="Top" Width="1138" Background="#FF1A1A1A"/>
+            <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="97" Margin="0,597,0,-0.4" VerticalAlignment="Top" Width="1138" Background="#FF1A1A1A">
+                <Button x:Name="playPauseButton" Content="" Canvas.Left="566" Canvas.Top="2" Width="49" Height="51" Click="playPauseOnClick" ClickMode="Release" BorderThickness="0" Cursor="Hand" FlowDirection="RightToLeft" RenderTransformOrigin="0.5,0.5">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/playButtonIcon.png"/>
+                    </Button.Background>
+                    <Button.BorderBrush>
+                        <ImageBrush ImageSource="Assets/playButtonIcon.png"/>
+                    </Button.BorderBrush>
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Canvas>
             <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="197" Background="#FF121212">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
-                <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="topRightLogo.png" Stretch="Fill">
+                <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="Assets/topRightLogo.png" Stretch="Fill">
                     <Image.OpacityMask>
-                        <ImageBrush ImageSource="topRightLogo.png"/>
+                        <ImageBrush ImageSource="Assets/topRightLogo.png"/>
                     </Image.OpacityMask>
                 </Image>
             </Canvas>
-            <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" />
-            <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1038,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release" BorderThickness="0"/>
+            <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" >
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="Red" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+            <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1038,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release" BorderThickness="0">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Background" Value="LightBlue" />
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background" Value="Cyan" TargetName="Border" />
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
             <Rectangle x:Name="windowDragger" Fill="Black" HorizontalAlignment="Left" Height="29" Margin="202,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="836" MouseDown="windowsDrag"/>
 
         </Grid>

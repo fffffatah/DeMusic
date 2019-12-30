@@ -27,9 +27,11 @@ namespace DeMusic
         private void closeOnClick(object sender, RoutedEventArgs e) => Close();
         private void minimizeOnClick(object sender, RoutedEventArgs e)=> WindowState = WindowState.Minimized;
 
-        private void windowsDrag(object sender, MouseButtonEventArgs e)
+        private void windowsDrag(object sender, MouseButtonEventArgs e)=> this.DragMove();
+
+        private void playPauseOnClick(object sender, RoutedEventArgs e)
         {
-            this.DragMove();
+
         }
     }
 }
