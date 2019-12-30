@@ -5,12 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeMusic"
         mc:Ignorable="d"
-        Title="DeMusic" Height="715.1" Width="1160.4" ResizeMode="CanMinimize" WindowStyle="None">
-    <Grid Background="Black">
-        <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="118" Margin="0,597,0,0" VerticalAlignment="Top" Width="1160" Background="#FF1A1A1A"/>
-        <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="154" Background="#FF121212"/>
-        <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1111,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release"/>
-        <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1060,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release"/>
+        Title="DeMusic" Height="715.1" Width="1160.4" ResizeMode="CanMinimize" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
+    <Border Margin="10" BorderThickness="1">
+        <Border.Effect>
+            <DropShadowEffect Color="Black"
+                          Direction="270"
+                          BlurRadius="10"
+                          ShadowDepth="3" />
+        </Border.Effect>
+        <Grid Background="Black">
+            <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="97" Margin="0,597,0,-0.4" VerticalAlignment="Top" Width="1138" Background="#FF1A1A1A"/>
+            <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="197" Background="#FF121212">
+                <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
+                <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="topRightLogo.png" Stretch="Fill">
+                    <Image.OpacityMask>
+                        <ImageBrush ImageSource="topRightLogo.png"/>
+                    </Image.OpacityMask>
+                </Image>
+            </Canvas>
+            <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" />
+            <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1038,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release" BorderThickness="0"/>
 
-    </Grid>
+        </Grid>
+    </Border>
 </Window>

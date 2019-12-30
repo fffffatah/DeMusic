@@ -24,7 +24,7 @@ namespace DeMusic
         {
             InitializeComponent();
         }
-        void closeOnClick(object sender, RoutedEventArgs e) => Close();
-        void minimizeOnClick(object sender, RoutedEventArgs e)=> WindowState = WindowState.Minimized;
+        private void closeOnClick(object sender, RoutedEventArgs e) => Close();
+        private void minimizeOnClick(object sender, RoutedEventArgs e)=> WindowState = WindowState.Minimized;
     }
 }
