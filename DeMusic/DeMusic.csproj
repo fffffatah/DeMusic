@@ -112,5 +112,8 @@
   <ItemGroup>
     <Resource Include="Assets\pauseButtonIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\albumButtonIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

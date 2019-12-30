@@ -39,7 +39,10 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button x:Name="nextButton" Content="" Canvas.Left="638" Canvas.Top="14" Width="33" Click="nextButtonOnClick" Height="29" RenderTransformOrigin="0.5,0.5" Cursor="Hand">
+                <Button x:Name="nextButton" Content="" Canvas.Left="638" Canvas.Top="14" Width="33" Click="nextButtonOnClick" Height="29" RenderTransformOrigin="0.5,0.5" Cursor="Hand" BorderThickness="0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="Assets/prevNextButtonIcon.png"/>
+                    </Button.Background>
                     <Button.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="-1"/>
@@ -48,9 +51,6 @@
                             <TranslateTransform/>
                         </TransformGroup>
                     </Button.RenderTransform>
-                    <Button.Background>
-                        <ImageBrush ImageSource="Assets/prevNextButtonIcon.png"/>
-                    </Button.Background>
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="LightBlue" />
@@ -84,6 +84,28 @@
                 </Image>
                 <ListBox x:Name="playlistListBox" Height="361" Canvas.Top="194" Width="197" BorderThickness="0" Background="#FF121212"/>
                 <Label x:Name="playlistListBoxToplabel" Content="PLAYLISTS" Canvas.Top="162" Foreground="#FF535353" Height="27" Width="197" FontFamily="Global Sans Serif" FontSize="10"/>
+                <Button x:Name="albumButton" Content="Albums" Canvas.Left="55" Canvas.Top="38" Width="142" Height="28" Background="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" Foreground="#FFFAFAFA" Cursor="Hand" FontSize="18" BorderBrush="{x:Null}">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="LightBlue" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Image x:Name="albumButtonIcon" Height="27" Canvas.Left="20" Canvas.Top="39" Width="30" Source="Assets/albumButtonIcon.png"/>
             </Canvas>
             <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" >
                 <Button.Style>
