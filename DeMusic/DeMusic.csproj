@@ -115,5 +115,17 @@
   <ItemGroup>
     <Resource Include="Assets\albumButtonIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\allSongsButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\recentlyPlayedButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\topLeftSelectionHighlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\newPlaylistButtonIcon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

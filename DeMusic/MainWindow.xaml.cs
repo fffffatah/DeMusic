@@ -51,5 +51,26 @@ namespace DeMusic
         {
 
         }
+
+        private void albumButton_Click(object sender, RoutedEventArgs e)
+        {
+            albumButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+        }
+
+        private void allSongsButton_Click(object sender, RoutedEventArgs e)
+        {
+            albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+        }
+
+        private void recentlyPlayedButton_Click(object sender, RoutedEventArgs e)
+        {
+            albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+        }
     }
 }
