@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DeMusic"
         mc:Ignorable="d"
         Title="DeMusic" Height="715.1" Width="1160.4" ResizeMode="CanMinimize" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
     <Border Margin="10" BorderThickness="1">
@@ -15,7 +14,7 @@
         </Border.Effect>
         <Grid Background="Black">
             <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="97" Margin="0,597,0,-0.4" VerticalAlignment="Top" Width="1138" Background="#FF1A1A1A">
-                <Button x:Name="prevButton" Content="" Canvas.Left="508" Width="33" Canvas.Top="15" Click="prevButtonOnClick" Height="27" BorderThickness="0" Cursor="Hand">
+                <Button x:Name="prevButton" Content="" Canvas.Left="500" Width="33" Canvas.Top="15" Click="prevButtonOnClick" Height="27" BorderThickness="0" Cursor="Hand">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
@@ -24,7 +23,6 @@
                     </Button.Background>
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -42,7 +40,7 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button x:Name="nextButton" Content="" Canvas.Left="638" Canvas.Top="14" Width="33" Click="nextButtonOnClick" Height="29" RenderTransformOrigin="0.5,0.5" Cursor="Hand" BorderThickness="0">
+                <Button x:Name="nextButton" Content="" Canvas.Left="635" Canvas.Top="14" Width="33" Click="nextButtonOnClick" Height="29" RenderTransformOrigin="0.5,0.5" Cursor="Hand" BorderThickness="0">
                     <Button.Effect>
                         <DropShadowEffect/>
                     </Button.Effect>
@@ -59,7 +57,6 @@
                     </Button.RenderTransform>
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -77,27 +74,26 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Image x:Name="playButtonImage" Height="40" Canvas.Left="572" Canvas.Top="10" Width="40" Source="Assets/playButtonIcon.png">
+                <Image x:Name="playButtonImage" Height="40" Canvas.Left="566" Canvas.Top="10" Width="40" Source="Assets/playButtonIcon.png">
                     <Image.Effect>
                         <DropShadowEffect/>
                     </Image.Effect>
                 </Image>
-                <Image x:Name="pauseButtonImage" Height="40" Canvas.Left="572" Canvas.Top="10" Width="40" Source="Assets/pauseButtonIcon.png" Visibility="Hidden">
+                <Image x:Name="pauseButtonImage" Height="40" Canvas.Left="566" Canvas.Top="10" Width="40" Source="Assets/pauseButtonIcon.png" Visibility="Hidden">
                     <Image.Effect>
                         <DropShadowEffect/>
                     </Image.Effect>
                 </Image>
-                <Button x:Name="playPauseButton" Content="" Canvas.Left="572" Canvas.Top="10" Width="40" BorderThickness="0" Height="40" Opacity="0" Click="playPauseOnClick" Cursor="Hand"/>
+                <Button x:Name="playPauseButton" Content="" Canvas.Left="566" Canvas.Top="10" Width="40" BorderThickness="0" Height="40" Opacity="0" Click="playPauseOnClick" Cursor="Hand"/>
             </Canvas>
             <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="197" Background="#FF121212">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
                 <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="Assets/Music.ico" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased"/>
-                <ListBox x:Name="playlistListBox" Height="361" Canvas.Top="194" Width="197" BorderThickness="0" Background="#FF121212"/>
+                <ListBox x:Name="playlistListBox" Height="361" Canvas.Top="194" Width="187" BorderThickness="0" Background="#FF121212" Canvas.Left="8"/>
                 <Label x:Name="playlistListBoxToplabel" Content="PLAYLISTS" Canvas.Top="162" Foreground="#FF535353" Height="27" Width="197" FontFamily="Global Sans Serif" FontSize="10"/>
                 <Button x:Name="albumButton" Content="Albums" Canvas.Left="55" Canvas.Top="46" Width="142" Height="28" Background="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" Foreground="#FFFAFAFA" Cursor="Hand" FontSize="18" BorderBrush="{x:Null}" Click="albumButton_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -119,7 +115,6 @@
                 <Button x:Name="allSongsButton" Content="All Songs" Canvas.Left="55" Canvas.Top="84" Width="142" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Cursor="Hand" Foreground="White" BorderThickness="0" Click="allSongsButton_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -141,7 +136,6 @@
                 <Button x:Name="recentlyPlayedButton" Content="Recently Played" Canvas.Left="55" Canvas.Top="124" Width="142" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Cursor="Hand" Click="recentlyPlayedButton_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -166,7 +160,6 @@
                 <Button x:Name="newPlaylistButton" Content="New Playlist" Canvas.Left="55" Canvas.Top="555" Width="142" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Foreground="#FF686868" Cursor="Hand">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
-                            <Setter Property="Background" Value="LightBlue" />
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
@@ -189,7 +182,6 @@
             <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1089,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" >
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="LightBlue" />
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
@@ -210,7 +202,6 @@
             <Button x:Name="minimizeButton" Content="-" HorizontalAlignment="Left" Margin="1038,0,0,0" VerticalAlignment="Top" Width="51" Height="29" FontSize="14" FontWeight="Bold" Background="Black" Foreground="White" BorderBrush="Black" Click="minimizeOnClick" ClickMode="Release" BorderThickness="0">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
-                        <Setter Property="Background" Value="LightBlue" />
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
@@ -229,6 +220,41 @@
                 </Button.Style>
             </Button>
             <Rectangle x:Name="windowDragger" Fill="Black" HorizontalAlignment="Left" Height="29" Margin="197,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="841" MouseDown="windowsDrag"/>
+            <Slider x:Name="musicSeekBar" HorizontalAlignment="Left" Margin="425,655,0,0" VerticalAlignment="Top" Width="317" Background="{x:Null}" Cursor="Hand" Foreground="White" BorderBrush="{x:Null}" SmallChange="1E-05" LargeChange="0"/>
+            <TextBox x:Name="searchBox" HorizontalAlignment="Left" Height="19" Margin="241,4,0,0" VerticalAlignment="Top" Width="113" Background="{x:Null}" Cursor="IBeam" BorderThickness="0" Foreground="White" BorderBrush="{x:Null}" CaretBrush="White"/>
+            <TextBlock x:Name="searchBoxHintText" HorizontalAlignment="Left" Margin="244,4,0,0" Text="Search" VerticalAlignment="Top" Height="19" Width="113" IsHitTestVisible="False" Foreground="DarkGray">
+                <TextBlock.Style>
+                    <Style TargetType="{x:Type TextBlock}">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Text, ElementName=searchBox}" Value="">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+            <Image x:Name="searchBoxIcon" HorizontalAlignment="Left" Height="9" Margin="232,8,0,0" VerticalAlignment="Top" Width="9" Source="Assets/searchBoxIcon.png"/>
+            <Button x:Name="topLeftBackButton" Content="&lt;" HorizontalAlignment="Left" Margin="197,4,0,0" VerticalAlignment="Top" Width="21" Height="18" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontWeight="Bold" FontFamily="Gill Sans MT" Cursor="Hand" Click="topLeftBackButton_Click">
+                <Button.Style>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                    <ControlTemplate.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                        </Trigger>
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
 
         </Grid>
     </Border>

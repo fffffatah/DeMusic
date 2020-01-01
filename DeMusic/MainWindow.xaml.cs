@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace DeMusic
 {
@@ -44,7 +45,8 @@ namespace DeMusic
         }
         private void prevButtonOnClick(object sender, RoutedEventArgs e)
         {
-
+            //CreateConnectionToDb obj = new CreateConnectionToDb();
+            //obj.MyConnection();
         }
 
         private void nextButtonOnClick(object sender, RoutedEventArgs e)
@@ -71,6 +73,11 @@ namespace DeMusic
             albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+        }
+
+        private void topLeftBackButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -98,10 +98,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\topRightLogo.png" />
+    <Resource Include="Assets\albumButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\allSongsButtonIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\Music.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\newPlaylistButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\pauseButtonIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\playButtonIcon.png" />
@@ -110,22 +119,16 @@
     <Resource Include="Assets\prevNextButtonIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\pauseButtonIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\albumButtonIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Assets\allSongsButtonIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Assets\recentlyPlayedButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\searchBoxIcon.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\topLeftSelectionHighlight.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\newPlaylistButtonIcon.png" />
+    <Resource Include="Assets\topRightLogo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
