@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
+using SQLiteDatabaseOperation;
 
 namespace DeMusic
 {
@@ -45,8 +46,8 @@ namespace DeMusic
         }
         private void prevButtonOnClick(object sender, RoutedEventArgs e)
         {
-            //CreateConnectionToDb obj = new CreateConnectionToDb();
-            //obj.MyConnection();
+            DeDatabaseConnection obj = new DeDatabaseConnection();
+            obj.MyConnection();
         }
 
         private void nextButtonOnClick(object sender, RoutedEventArgs e)
