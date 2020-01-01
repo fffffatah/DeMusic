@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Finisar.SQLite;
+using System.Data.SQLite;
 
 namespace SQLiteDatabaseOperation
 {
@@ -21,7 +21,7 @@ namespace SQLiteDatabaseOperation
             {
                 //Data Source=database.db; Mode=ReadWriteCreate; Cache=Default
                 // create a new database connection:
-                sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;New=True;Compress=True;");
+                sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;New=True");
 
                 // open the connection:
                 sqlite_conn.Open();
