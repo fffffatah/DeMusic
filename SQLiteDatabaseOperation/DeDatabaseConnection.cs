@@ -19,6 +19,7 @@ namespace SQLiteDatabaseOperation
         {
             try
             {
+                //string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 //Data Source=database.db; Mode=ReadWriteCreate; Cache=Default
                 // create a new database connection:
                 sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;New=True");
@@ -67,8 +68,15 @@ namespace SQLiteDatabaseOperation
             }
             catch (Exception e)
             {
-
-                File.WriteAllText(@"log.txt", e.ToString());
+                if (Directory.Exists("Logs"))
+                {
+                    File.WriteAllText(@"Logs\log.txt", e.ToString());
+                }
+                else
+                {
+                    Directory.CreateDirectory("Logs");
+                    File.WriteAllText(@"Logs\log.txt", e.ToString());
+                }
             }
         }
     }

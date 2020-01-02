@@ -49,7 +49,10 @@ namespace DeMusic
         private void prevButtonOnClick(object sender, RoutedEventArgs e)
         {
             DeDatabaseConnection obj = new DeDatabaseConnection();
-            obj.MyConnection();
+            new Thread(() =>
+            {
+                obj.MyConnection();
+            }).Start();
         }
 
         private void nextButtonOnClick(object sender, RoutedEventArgs e)
