@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using SQLiteDatabaseOperation;
+using System.Diagnostics;
 
 namespace DeMusic
 {
@@ -25,6 +26,7 @@ namespace DeMusic
         public MainWindow()
         {
             InitializeComponent();
+            WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
         }
         private void closeOnClick(object sender, RoutedEventArgs e) => Close();
         private void minimizeOnClick(object sender, RoutedEventArgs e)=> WindowState = WindowState.Minimized;
@@ -79,6 +81,22 @@ namespace DeMusic
         private void topLeftBackButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void settingButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void aboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            string version = fvi.FileVersion;
+            AboutWindow aboutWindowObj = new AboutWindow(version);
+            aboutWindowObj.Owner = Window.GetWindow(this);
+            aboutWindowObj.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            aboutWindowObj.Show();
         }
     }
 }
