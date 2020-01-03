@@ -72,6 +72,7 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="DeDatabaseConnection.cs" />
+    <Compile Include="DeQueries.cs" />
     <Compile Include="SQLiteDatabaseOperationUserControl.xaml.cs">
       <DependentUpon>SQLiteDatabaseOperationUserControl.xaml</DependentUpon>
       <SubType>Code</SubType>

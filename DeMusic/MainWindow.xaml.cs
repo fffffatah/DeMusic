@@ -15,7 +15,7 @@ using System.Windows.Shapes;
 using System.Threading;
 using SQLiteDatabaseOperation;
 using System.Diagnostics;
-
+using Microsoft.Win32;
 namespace DeMusic
 {
     /// <summary>
@@ -48,11 +48,7 @@ namespace DeMusic
         }
         private void prevButtonOnClick(object sender, RoutedEventArgs e)
         {
-            DeDatabaseConnection obj = new DeDatabaseConnection();
-            new Thread(() =>
-            {
-                obj.MyConnection();
-            }).Start();
+
         }
 
         private void nextButtonOnClick(object sender, RoutedEventArgs e)

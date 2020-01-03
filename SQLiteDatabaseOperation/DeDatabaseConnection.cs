@@ -10,74 +10,26 @@ namespace SQLiteDatabaseOperation
 {
     public class DeDatabaseConnection
     {
-        // We use these three SQLite objects:
-
+        //CREATE SQL VARIABLES
         SQLiteConnection sqlite_conn;
         SQLiteCommand sqlite_cmd;
-        SQLiteDataReader sqlite_datareader;
-        public void MyConnection()
+        //CREATE CONNECTION WITH THE ALREADY CREATED DATABASE OR CREATE A NEW ONE
+        public DeDatabaseConnection()=> sqlite_conn = new SQLiteConnection("Data Source=" + Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\DeMusic\songdatabase.db;Version=3;New=True");
+        //THIS METHOD OPENS THE CONNECTION TO DB
+        public void OpenConnection()=>sqlite_conn.Open();
+        //THIS METHOD CLOSES THE CONECTION WITH DB
+        public void CloseConnection()=>sqlite_conn.Close();
+        //THIS MEHTOD EXECUTES THE QUERY AND RETURNS THE RESULT
+        public SQLiteDataReader GetData(string query)
         {
-            try
-            {
-                //string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                //Data Source=database.db; Mode=ReadWriteCreate; Cache=Default
-                // create a new database connection:
-                sqlite_conn = new SQLiteConnection("Data Source=database.db;Version=3;New=True");
-
-                // open the connection:
-                sqlite_conn.Open();
-
-                // create a new SQL command:
-                sqlite_cmd = sqlite_conn.CreateCommand();
-
-                // Let the SQLiteCommand object know our SQL-Query:
-                sqlite_cmd.CommandText = "CREATE TABLE test (id integer primary key, text varchar(100));";
-
-                // Now lets execute the SQL ;D
-                sqlite_cmd.ExecuteNonQuery();
-
-                // Lets insert something into our new table:
-                sqlite_cmd.CommandText = "INSERT INTO test (id, text) VALUES (1, 'Test Text 1');";
-
-                // And execute this again ;D
-                sqlite_cmd.ExecuteNonQuery();
-
-                // ...and inserting another line:
-                sqlite_cmd.CommandText = "INSERT INTO test (id, text) VALUES (2, 'Test Text 2');";
-
-                // And execute this again ;D
-                sqlite_cmd.ExecuteNonQuery();
-
-                // But how do we read something out of our table ?
-                // First lets build a SQL-Query again:
-                sqlite_cmd.CommandText = "SELECT * FROM test";
-
-                // Now the SQLiteCommand object can give us a DataReader-Object:
-                sqlite_datareader = sqlite_cmd.ExecuteReader();
-
-                // The SQLiteDataReader allows us to run through the result lines:
-                while (sqlite_datareader.Read()) // Read() returns true if there is still a result line to read
-                {
-                    // Print out the content of the text field:
-                    //Console.WriteLine(sqlite_datareader["text"]);
-                    File.WriteAllText(@"out.txt", sqlite_datareader["text"].ToString());
-                }
-
-                // We are ready, now lets cleanup and close our connection:
-                sqlite_conn.Close();
-            }
-            catch (Exception e)
-            {
-                if (Directory.Exists("Logs"))
-                {
-                    File.WriteAllText(@"Logs\log.txt", e.ToString());
-                }
-                else
-                {
-                    Directory.CreateDirectory("Logs");
-                    File.WriteAllText(@"Logs\log.txt", e.ToString());
-                }
-            }
+            sqlite_cmd = new SQLiteCommand(query, sqlite_conn);
+            return sqlite_cmd.ExecuteReader();
+        }
+        //THIS METHOD EXECUTES NON-QUERY (CREATE, INSERT, UPDATE, DELETE) AND RETURNS THE NUMBER OF ROWS AFFECTED
+        public int ExecuteSQL(string query)
+        {
+            sqlite_cmd = new SQLiteCommand(query, sqlite_conn);
+            return sqlite_cmd.ExecuteNonQuery();
         }
     }
 }
