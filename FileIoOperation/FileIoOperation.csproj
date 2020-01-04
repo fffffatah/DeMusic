@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -48,10 +49,13 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FolderPaths.cs" />
+    <Compile Include="Song.cs" />
     <Page Include="FileIoOperationUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="BrowseForDirectory.cs" />
     <Compile Include="ConfigFiles.cs" />
     <Compile Include="FileIoOperationUserControl.xaml.cs">
       <DependentUpon>FileIoOperationUserControl.xaml</DependentUpon>
@@ -59,7 +63,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FolderPaths.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

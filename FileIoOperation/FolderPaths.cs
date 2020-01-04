@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FileIoOperation
 {
-    class FolderPaths
+    public class FolderPaths
     {
         public string SongFolderPath { get; set; }
     }

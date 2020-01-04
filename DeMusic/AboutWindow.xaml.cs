@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,15 +20,19 @@ namespace DeMusic
     /// </summary>
     public partial class AboutWindow : Window
     {
-        public AboutWindow(string deMusicVersion)
+        public AboutWindow()
         {
             InitializeComponent();
-            aboutVersionLabel.Content = "Version: " + deMusicVersion;
+            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
+            aboutVersionLabel.Content = "Version: " + fvi.FileVersion;
         }
 
         private void closeAboutButton_Click(object sender, RoutedEventArgs e)
         {
+            this.Owner.Activate();
             Close();
+            
         }
 
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)

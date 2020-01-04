@@ -339,7 +339,6 @@
                     </Style>
                 </Button.Style>
             </Button>
-
         </Grid>
     </Border>
 </Window>

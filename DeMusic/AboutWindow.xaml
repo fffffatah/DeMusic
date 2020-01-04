@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DeMusic"
         x:Class="DeMusic.AboutWindow"
         mc:Ignorable="d"
-        Title="About" Height="768" Width="1336" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
+        Title="About" Height="768" Width="1336" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
     <Border Margin="200" BorderThickness="1">
         <Border.Effect>
             <DropShadowEffect Color="Black"

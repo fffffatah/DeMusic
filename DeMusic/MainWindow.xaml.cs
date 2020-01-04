@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
 using System.Diagnostics;
-using Microsoft.Win32;
 namespace DeMusic
 {
     /// <summary>
@@ -87,25 +86,20 @@ namespace DeMusic
         }
         private void topLeftBackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void settingButton_Click(object sender, RoutedEventArgs e)
         {
             SettingWindow settingWindowObj = new SettingWindow();
-            settingWindowObj.Owner = Window.GetWindow(this);
-            settingWindowObj.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            settingWindowObj.Owner = Application.Current.MainWindow;
             settingWindowObj.Show();
         }
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)
         {
-            System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
-            FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            string version = fvi.FileVersion;
-            AboutWindow aboutWindowObj = new AboutWindow(version);
-            aboutWindowObj.Owner = Window.GetWindow(this);
-            aboutWindowObj.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            AboutWindow aboutWindowObj = new AboutWindow();
+            aboutWindowObj.Owner = Application.Current.MainWindow;
             aboutWindowObj.Show();
         }
 

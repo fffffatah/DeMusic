@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteDatabaseOperation", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIoOperation", "FileIoOperation\FileIoOperation.csproj", "{8C91701B-32BB-467B-97A1-6F76B33F3DEF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{F49BAECE-6FF2-4DAE-9B12-52AE242E4ED8}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{8C91701B-32BB-467B-97A1-6F76B33F3DEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C91701B-32BB-467B-97A1-6F76B33F3DEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C91701B-32BB-467B-97A1-6F76B33F3DEF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F49BAECE-6FF2-4DAE-9B12-52AE242E4ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F49BAECE-6FF2-4DAE-9B12-52AE242E4ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F49BAECE-6FF2-4DAE-9B12-52AE242E4ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F49BAECE-6FF2-4DAE-9B12-52AE242E4ED8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

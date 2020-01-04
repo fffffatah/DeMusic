@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeMusic"
         mc:Ignorable="d"
-        Title="Settings" Height="768" Width="1336" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize">
+        Title="Settings" Height="768" Width="1336" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
     <Border Margin="200" BorderThickness="1">
         <Border.Effect>
             <DropShadowEffect Color="Black"
@@ -23,7 +23,7 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Grid.RenderTransform>
-                <Button x:Name="addDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,302,0,0" VerticalAlignment="Top" Width="43" BorderBrush="{x:Null}" BorderThickness="0" Height="42" Foreground="{x:Null}" Cursor="Hand">
+                <Button x:Name="addDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,302,0,0" VerticalAlignment="Top" Width="43" BorderBrush="{x:Null}" BorderThickness="0" Height="42" Foreground="{x:Null}" Cursor="Hand" Click="addDirectoryButton_Click">
                     <Button.Background>
                         <ImageBrush ImageSource="Assets/addDirectoryButtonIcon.png" Stretch="Uniform"/>
                     </Button.Background>
@@ -47,7 +47,7 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Button x:Name="removeDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,349,0,0" VerticalAlignment="Top" Width="43" Height="43" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand">
+                <Button x:Name="removeDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,349,0,0" VerticalAlignment="Top" Width="43" Height="43" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand" Click="removeDirectoryButton_Click">
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="Assets/removeDirectoryButtonIcon.png"/>
                     </Button.Background>
@@ -95,8 +95,8 @@
             </Button>
             <Label x:Name="DirectoryListBoxToplabel" Content="DIRECTORIES" Canvas.Top="214" Foreground="#FF535353" FontFamily="Global Sans Serif" FontSize="10" Canvas.Left="8" Margin="40,84,815.4,259.4" HorizontalContentAlignment="Left"/>
             <Label x:Name="settingWindowMusicLabel" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Height="81" Width="182" Foreground="White" FontSize="48" FontFamily="Dubai Medium" FontWeight="Bold" FontStretch="Expanded" Margin="40,0,0,0"/>
-            <ListBox x:Name="songDirectoryListbox" HorizontalAlignment="Left" Height="151" Margin="45,107,0,0" VerticalAlignment="Top" Width="802" Background="{x:Null}" BorderBrush="Cyan"/>
-            <Button x:Name="saveSettingButton" Content="Save" HorizontalAlignment="Left" Margin="433,299,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontWeight="Bold" FontSize="16" Cursor="Hand" Height="38">
+            <ListBox x:Name="songDirectoryListbox" HorizontalAlignment="Left" Height="151" Margin="45,107,0,0" VerticalAlignment="Top" Width="802" Background="{x:Null}" BorderBrush="Cyan" Foreground="White"/>
+            <Button x:Name="saveSettingButton" Content="Save" HorizontalAlignment="Left" Margin="433,299,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontWeight="Bold" FontSize="16" Cursor="Hand" Height="38" Click="saveSettingButton_Click">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
