@@ -58,6 +58,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="SettingWindow.xaml.cs">
+      <DependentUpon>SettingWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -77,8 +80,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="SettingWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MusicControl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -138,14 +146,21 @@
     <Resource Include="Assets\topRightLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SQLiteDatabaseOperation\SQLiteDatabaseOperation.csproj">
-      <Project>{65992095-5a38-4cae-8ee2-e3f254c89b9d}</Project>
-      <Name>SQLiteDatabaseOperation</Name>
+    <Resource Include="Assets\settingButtonIcon.png" />
+    <Resource Include="Assets\volumeSliderIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\artistButtonIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FileIoOperation\FileIoOperation.csproj">
+      <Project>{8c91701b-32bb-467b-97a1-6f76b33f3def}</Project>
+      <Name>FileIoOperation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\settingButtonIcon.png" />
-    <Resource Include="Assets\volumeSliderIcon.png" />
+    <Resource Include="Assets\addDirectoryButtonIcon.png" />
+    <Resource Include="Assets\removeDirectoryButtonIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

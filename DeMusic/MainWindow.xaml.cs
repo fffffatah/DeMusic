@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Threading;
-using SQLiteDatabaseOperation;
 using System.Diagnostics;
 using Microsoft.Win32;
 namespace DeMusic
@@ -61,6 +60,7 @@ namespace DeMusic
             albumButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
             allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            artistButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
         }
 
         private void allSongsButton_Click(object sender, RoutedEventArgs e)
@@ -68,6 +68,7 @@ namespace DeMusic
             albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
             recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            artistButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
         }
 
         private void recentlyPlayedButton_Click(object sender, RoutedEventArgs e)
@@ -75,8 +76,15 @@ namespace DeMusic
             albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
             recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            artistButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
         }
-
+        private void artistButton_Click(object sender, RoutedEventArgs e)
+        {
+            albumButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Hidden;
+            artistButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+        }
         private void topLeftBackButton_Click(object sender, RoutedEventArgs e)
         {
 
@@ -84,7 +92,10 @@ namespace DeMusic
 
         private void settingButton_Click(object sender, RoutedEventArgs e)
         {
-
+            SettingWindow settingWindowObj = new SettingWindow();
+            settingWindowObj.Owner = Window.GetWindow(this);
+            settingWindowObj.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+            settingWindowObj.Show();
         }
 
         private void aboutButton_Click(object sender, RoutedEventArgs e)
@@ -97,5 +108,7 @@ namespace DeMusic
             aboutWindowObj.WindowStartupLocation = WindowStartupLocation.CenterOwner;
             aboutWindowObj.Show();
         }
+
+        
     }
 }

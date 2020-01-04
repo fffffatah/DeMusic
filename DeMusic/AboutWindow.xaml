@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DeMusic"
-        xmlns:SQLiteDatabaseOperation="clr-namespace:SQLiteDatabaseOperation;assembly=SQLiteDatabaseOperation" x:Class="DeMusic.AboutWindow"
+        x:Class="DeMusic.AboutWindow"
         mc:Ignorable="d"
         Title="About" Height="768" Width="1336" WindowStyle="None" Background="Transparent" ResizeMode="NoResize" AllowsTransparency="True">
     <Border Margin="200" BorderThickness="1">
@@ -25,22 +25,22 @@
                     </TransformGroup>
                 </Grid.RenderTransform>
             </Grid>
-            <Button x:Name="closeAboutButton" Content="X" Margin="870,0,0.4,0" VerticalAlignment="Top" Height="31" Background="{x:Null}" BorderThickness="0" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" Click="closeAboutButton_Click" FontSize="16">
+            <Button x:Name="closeAboutButton" Content="X" Margin="900,0,0.4,0" VerticalAlignment="Top" Height="31" Background="{x:Null}" BorderThickness="0" Cursor="Hand" BorderBrush="{x:Null}" Foreground="White" Click="closeAboutButton_Click" FontSize="16">
                 <Button.Style>
                     <Style TargetType="{x:Type Button}">
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center"
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
                                                       VerticalAlignment="Center" />
-                                    </Border>
-                                    <ControlTemplate.Triggers>
-                                        <Trigger Property="IsMouseOver" Value="True">
-                                            <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
-                                        </Trigger>
-                                    </ControlTemplate.Triggers>
-                                </ControlTemplate>
+                                        </ContentControl>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Foreground" Value="Red" TargetName="Content" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
                             </Setter.Value>
                         </Setter>
                     </Style>

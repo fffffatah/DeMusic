@@ -134,7 +134,7 @@
             <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="651" VerticalAlignment="Top" Width="213" Background="#FF121212">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
                 <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="Assets/Music.ico" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased"/>
-                <ListBox x:Name="playlistListBox" Height="415" Canvas.Top="189" Width="195" BorderThickness="0" Background="#FF121212" Canvas.Left="8">
+                <ListBox x:Name="playlistListBox" Height="363" Canvas.Top="241" Width="195" BorderThickness="0" Background="#FF121212" Canvas.Left="8">
                     <ListBox.Style>
                         <Style TargetType="{x:Type ListBox}">
                             <Style.Triggers>
@@ -146,19 +146,20 @@
                         </Style>
                     </ListBox.Style>
                 </ListBox>
-                <Label x:Name="playlistListBoxToplabel" Content="PLAYLISTS" Canvas.Top="162" Foreground="#FF535353" Height="27" Width="195" FontFamily="Global Sans Serif" FontSize="10" Canvas.Left="8"/>
-                <Button x:Name="albumButton" Content="Albums" Canvas.Left="55" Canvas.Top="46" Width="142" Height="28" Background="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" Foreground="#FFFAFAFA" Cursor="Hand" FontSize="18" BorderBrush="{x:Null}" Click="albumButton_Click">
+                <Label x:Name="playlistListBoxToplabel" Content="PLAYLISTS" Canvas.Top="214" Foreground="#FF535353" Height="27" Width="195" FontFamily="Global Sans Serif" FontSize="10" Canvas.Left="8"/>
+                <Button x:Name="albumButton" Content="Albums" Canvas.Left="55" Canvas.Top="46" Width="142" Height="28" Background="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" Foreground="White" Cursor="Hand" FontSize="18" BorderBrush="{x:Null}" Click="albumButton_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
-                                        </Border>
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center" />
+                                        </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -174,12 +175,13 @@
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
-                                        </Border>
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center" />
+                                        </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -189,18 +191,19 @@
                     </Button.Style>
                 </Button>
                 <Image x:Name="allSongsButtonIcon" Height="28" Canvas.Left="20" Canvas.Top="84" Width="30" Source="Assets/allSongsButtonIcon.png"/>
-                <Button x:Name="recentlyPlayedButton" Content="Recently Played" Canvas.Left="55" Canvas.Top="124" Width="142" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Cursor="Hand" Click="recentlyPlayedButton_Click">
+                <Button x:Name="recentlyPlayedButton" Content="Recently Played" Canvas.Left="55" Canvas.Top="160" Width="142" Height="28" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Cursor="Hand" Click="recentlyPlayedButton_Click">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
-                                        </Border>
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center" />
+                                        </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -209,22 +212,23 @@
                         </Style>
                     </Button.Style>
                 </Button>
-                <Image x:Name="recentlyPlayedButtonIcon" Height="28" Canvas.Left="20" Canvas.Top="124" Width="30" Source="Assets/recentlyPlayedButtonIcon.png"/>
+                <Image x:Name="recentlyPlayedButtonIcon" Height="28" Canvas.Left="20" Canvas.Top="160" Width="30" Source="Assets/recentlyPlayedButtonIcon.png"/>
                 <Image x:Name="albumButtonSelectedHighlightIcon" Height="28" Canvas.Top="46" Width="9" Source="Assets/topLeftSelectionHighlight.png"/>
                 <Image x:Name="allSongsButtonSelectedHighlightIcon" Height="28" Canvas.Top="84" Width="9" Source="Assets/topLeftSelectionHighlight.png" Visibility="Hidden"/>
-                <Image x:Name="recentlyPlayedButtonSelectedHighlightIcon" Height="28" Canvas.Top="124" Width="9" Source="Assets/topLeftSelectionHighlight.png" Visibility="Hidden"/>
+                <Image x:Name="recentlyPlayedButtonSelectedHighlightIcon" Height="28" Canvas.Top="160" Width="9" Source="Assets/topLeftSelectionHighlight.png" Visibility="Hidden"/>
                 <Button x:Name="newPlaylistButton" Content="New Playlist" Canvas.Left="55" Canvas.Top="609" Width="142" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" Foreground="#FF686868" Cursor="Hand">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Template">
                                 <Setter.Value>
                                     <ControlTemplate TargetType="{x:Type Button}">
-                                        <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" />
-                                        </Border>
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center" />
+                                        </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                                <Setter Property="Foreground" Value="WHite" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -234,6 +238,29 @@
                     </Button.Style>
                 </Button>
                 <Image x:Name="newPlaylistButtonIcon" Height="42" Canvas.Left="25" Canvas.Top="609" Width="25" Source="Assets/newPlaylistButtonIcon.png"/>
+                <Button x:Name="artistButton" Content="Artists" Canvas.Left="55" Canvas.Top="122" Width="142" FontFamily="Dubai Medium" FontWeight="Bold" FontSize="18" BorderThickness="0" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="artistButton_Click" Cursor="Hand">
+                    <Button.Style>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                            <ContentPresenter HorizontalAlignment="Left"
+                                                      VerticalAlignment="Center" />
+                                        </ContentControl>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Image x:Name="artistButtonIcon" Height="23" Canvas.Left="25" Canvas.Top="124" Width="21" Source="Assets/artistButtonIcon.png"/>
+                <Image x:Name="artistButtonSelectedHighlightIcon" Height="28" Canvas.Top="122" Width="9" Source="Assets/topLeftSelectionHighlight.png" Visibility="Hidden"/>
             </Canvas>
             <Button x:Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="1265,0,0,0" VerticalAlignment="Top" Width="49" Height="29" FontSize="16" Background="Black" BorderBrush="Black" Foreground="White" Click="closeOnClick" ClickMode="Release" BorderThickness="0" >
                 <Button.Style>
@@ -297,12 +324,13 @@
                         <Setter Property="Template">
                             <Setter.Value>
                                 <ControlTemplate TargetType="{x:Type Button}">
-                                    <Border x:Name="Border" Background="{TemplateBinding Background}">
-                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
-                                    </Border>
+                                    <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                        <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center" />
+                                    </ContentControl>
                                     <ControlTemplate.Triggers>
                                         <Trigger Property="IsMouseOver" Value="True">
-                                            <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                            <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
                                         </Trigger>
                                     </ControlTemplate.Triggers>
                                 </ControlTemplate>

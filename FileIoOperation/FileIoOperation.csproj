@@ -82,5 +82,11 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SQLiteDatabaseOperation\SQLiteDatabaseOperation.csproj">
+      <Project>{65992095-5a38-4cae-8ee2-e3f254c89b9d}</Project>
+      <Name>SQLiteDatabaseOperation</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
