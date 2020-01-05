@@ -10,33 +10,26 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 using FileIoOperation;
+                                                
 
 namespace DeMusic
 {
     /// <summary>
-    /// Interaction logic for SettingWindow.xaml
+    /// Interaction logic for SettingPage.xaml
     /// </summary>
-    public partial class SettingWindow : Window
+    public partial class SettingPage : Page
     {
-        public SettingWindow()
+        public SettingPage()
         {
             InitializeComponent();
         }
-
-        private void closeSettingButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Owner.Activate();
-            Close();
-        }
-
         private void addDirectoryButton_Click(object sender, RoutedEventArgs e)
         {
-            BrowseForDirectory browse = new BrowseForDirectory();
-            ListBoxItem itm = new ListBoxItem();
-            itm.Content = browse.FolderPath.SongFolderPath;
-            songDirectoryListbox.Items.Add(itm);
+            new ControlAllPageComponent(this).AddDirectory();
         }
 
         private void removeDirectoryButton_Click(object sender, RoutedEventArgs e)
@@ -46,7 +39,7 @@ namespace DeMusic
 
         private void saveSettingButton_Click(object sender, RoutedEventArgs e)
         {
-            
+
         }
     }
 }
