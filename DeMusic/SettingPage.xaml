@@ -1,0 +1,85 @@
+﻿<Page x:Class="DeMusic.SettingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DeMusic"
+      mc:Ignorable="d" 
+      d:DesignHeight="622" d:DesignWidth="1101"
+      Title="SettingPage" Background="Black">
+
+    <Grid Background="Black">
+        <Button x:Name="addDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,302,0,0" VerticalAlignment="Top" Width="43" BorderBrush="{x:Null}" BorderThickness="0" Height="42" Foreground="{x:Null}" Cursor="Hand" Click="addDirectoryButton_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Assets/addDirectoryButtonIcon.png" Stretch="Uniform"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="removeDirectoryButton" Content="" HorizontalAlignment="Left" Margin="1038,349,0,0" VerticalAlignment="Top" Width="43" Height="43" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand" Click="removeDirectoryButton_Click">
+            <Button.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="Assets/removeDirectoryButtonIcon.png"/>
+            </Button.Background>
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border x:Name="Border" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center" />
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <!-- NO COLOR CHANGE ON HOVER AND CLICK -->
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="DirectoryListBoxToplabel" Content="DIRECTORIES" Canvas.Top="214" Foreground="#FF535353" FontFamily="Global Sans Serif" FontSize="10" Canvas.Left="8" Margin="40,84,815.4,259.4" HorizontalContentAlignment="Left"/>
+        <Label x:Name="settingWindowMusicLabel" Content="Settings" HorizontalAlignment="Left" VerticalAlignment="Top" Height="81" Width="182" Foreground="White" FontSize="48" FontFamily="Dubai Medium" FontWeight="Bold" FontStretch="Expanded" Margin="40,0,0,0"/>
+        <ListBox x:Name="songDirectoryListbox" HorizontalAlignment="Left" Height="279" Margin="40,104,0,0" VerticalAlignment="Top" Width="993" Background="{x:Null}" BorderBrush="Cyan" Foreground="White"/>
+        <Button x:Name="saveSettingButton" Content="Save" HorizontalAlignment="Left" Margin="514,518,0,0" VerticalAlignment="Top" Width="75" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" BorderThickness="0" FontWeight="Bold" FontSize="16" Cursor="Hand" Height="38" Click="saveSettingButton_Click">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <ContentControl x:Name="Content" Background="{TemplateBinding Foreground}">
+                                    <ContentPresenter HorizontalAlignment="Center"
+                                                      VerticalAlignment="Center" />
+                                </ContentControl>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Page>

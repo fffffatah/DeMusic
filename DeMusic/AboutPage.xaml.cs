@@ -11,30 +11,23 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace DeMusic
 {
     /// <summary>
-    /// Interaction logic for AboutWindow.xaml
+    /// Interaction logic for AboutPage.xaml
     /// </summary>
-    public partial class AboutWindow : Window
+    public partial class AboutPage : Page
     {
-        public AboutWindow()
+        public AboutPage()
         {
             InitializeComponent();
             System.Reflection.Assembly assembly = System.Reflection.Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
             aboutVersionLabel.Content = "Version: " + fvi.FileVersion;
         }
-
-        private void closeAboutButton_Click(object sender, RoutedEventArgs e)
-        {
-            this.Owner.Activate();
-            Close();
-            
-        }
-
         private void Hyperlink_RequestNavigate(object sender, System.Windows.Navigation.RequestNavigateEventArgs e)
         {
             System.Diagnostics.Process.Start(e.Uri.ToString());
