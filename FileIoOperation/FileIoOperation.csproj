@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FolderPaths.cs" />
+    <Compile Include="RunQueries.cs" />
     <Compile Include="Song.cs" />
     <Page Include="FileIoOperationUserControl.xaml">
       <Generator>MSBuild:Compile</Generator>

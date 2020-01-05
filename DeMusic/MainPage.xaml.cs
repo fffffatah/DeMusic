@@ -53,23 +53,35 @@ namespace DeMusic
         {
             new ControlAllPageComponent(this).HighlightHide();
             albumButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            topLeftBigLabel.Content = "Albums";
+            topLeftBigLabel.Visibility = Visibility.Visible;
+            albumsPageFrame.Visibility = Visibility.Visible;
         }
 
         private void allSongsButton_Click(object sender, RoutedEventArgs e)
         {
             new ControlAllPageComponent(this).HighlightHide();
             allSongsButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            topLeftBigLabel.Content = "All Songs";
+            topLeftBigLabel.Visibility = Visibility.Visible;
+            allSongsPageFrame.Visibility = Visibility.Visible;
         }
 
         private void recentlyPlayedButton_Click(object sender, RoutedEventArgs e)
         {
             new ControlAllPageComponent(this).HighlightHide();
             recentlyPlayedButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            topLeftBigLabel.Content = "Recently Played";
+            topLeftBigLabel.Visibility = Visibility.Visible;
+            recentlyPlayedPageFrame.Visibility = Visibility.Visible;
         }
         private void artistButton_Click(object sender, RoutedEventArgs e)
         {
             new ControlAllPageComponent(this).HighlightHide();
             artistButtonSelectedHighlightIcon.Visibility = Visibility.Visible;
+            topLeftBigLabel.Content = "Artists";
+            topLeftBigLabel.Visibility = Visibility.Visible;
+            artistPageFrame.Visibility = Visibility.Visible;
         }
         private void topLeftBackButton_Click(object sender, RoutedEventArgs e)
         {
