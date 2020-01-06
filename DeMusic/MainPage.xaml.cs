@@ -102,5 +102,15 @@ namespace DeMusic
             new ControlAllPageComponent(this).HighlightHide();
             aboutPageFrame.Visibility = Visibility.Visible;
         }
+
+        private void shuffleButton_Click(object sender, RoutedEventArgs e)
+        {
+            new ControlAllPageComponent(this).ShuffleButtonControl();
+        }
+
+        private void repeatButton_Click(object sender, RoutedEventArgs e)
+        {
+            new ControlAllPageComponent(this).RepeatButtonControl();
+        }
     }
 }

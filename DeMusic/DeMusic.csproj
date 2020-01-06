@@ -68,13 +68,17 @@
     <Compile Include="AlbumsPage.xaml.cs">
       <DependentUpon>AlbumsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AlbumsPageLogic.cs" />
     <Compile Include="AllSongsPage.xaml.cs">
       <DependentUpon>AllSongsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ArtistPage.xaml.cs">
       <DependentUpon>ArtistPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BottomPanelLogic.cs" />
+    <Compile Include="CheckAppDataLogic.cs" />
     <Compile Include="ControlAllPageComponent.cs" />
+    <Compile Include="HideComponentLogic.cs" />
     <Compile Include="LonelyPage.xaml.cs">
       <DependentUpon>LonelyPage.xaml</DependentUpon>
     </Compile>
@@ -87,6 +91,7 @@
     <Compile Include="SettingPage.xaml.cs">
       <DependentUpon>SettingPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SettingPageLogic.cs" />
     <Page Include="AboutPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -216,6 +221,14 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\noAlbumArtIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\shuffleDisabledIcon.png" />
+    <Resource Include="Assets\shuffleEnabledicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\repeatDisabledIcon.png" />
+    <Resource Include="Assets\repeatEnabledIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

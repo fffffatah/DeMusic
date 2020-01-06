@@ -136,6 +136,28 @@
                 <Image x:Name="bottomLeftAlbumArt" Height="75" Canvas.Left="10" Canvas.Top="10" Width="75" Source="Assets/noAlbumArtIcon.png"/>
                 <Label x:Name="songTitleBottomLabel" Content="Play some music ;)" Canvas.Left="90" Canvas.Top="10" Foreground="White" FontFamily="Dubai Medium" FontSize="14" Height="33" Width="261"/>
                 <Label x:Name="albumNameBottomLabel" Content="Unknown Album" Canvas.Left="90" Canvas.Top="48" Foreground="Gray" FontFamily="Dubai Medium" Width="261"/>
+                <Image x:Name="shuffleDisabledIcon" Source="Assets\shuffleDisabledIcon.png" Canvas.Left="548" Canvas.Top="14" Height="40" Width="14">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="shuffleEnabledIcon" Source="Assets\shuffleEnabledIcon.png" Canvas.Left="548" Canvas.Top="14" Height="40" Width="14" Visibility="Hidden">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+                <Button x:Name="shuffleButton" Content="Button" Canvas.Left="548" Canvas.Top="14" Width="14" Height="40" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="shuffleButton_Click" Cursor="Hand" Opacity="0"/>
+                <Image x:Name="repeatDisabledIcon" Source="Assets\repeatDisabledIcon.png" Canvas.Left="720" Canvas.Top="14" Height="40" Width="14">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="repeatEnabledIcon" Source="Assets\repeatEnabledIcon.png" Canvas.Left="720" Canvas.Top="14" Height="40" Width="14" Visibility="Hidden">
+                    <Image.Effect>
+                        <DropShadowEffect/>
+                    </Image.Effect>
+                </Image>
+                <Button x:Name="repeatButton" Content="Button" Canvas.Left="720" Canvas.Top="14" Width="14" Height="40" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="repeatButton_Click" Cursor="Hand" Opacity="0"/>
             </Canvas>
             <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="651" VerticalAlignment="Top" Width="213" Background="#FF121212">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>

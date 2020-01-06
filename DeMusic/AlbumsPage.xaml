@@ -7,8 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="577" d:DesignWidth="1101"
       Title="AlbumsPage" Background="Black">
+    <Grid x:Name="albumsGrid" Background="Black">
 
-    <Grid Background="Black">
-        
     </Grid>
 </Page>
