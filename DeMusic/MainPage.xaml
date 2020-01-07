@@ -368,6 +368,7 @@
                 </Button.Style>
             </Button>
             <Frame x:Name="lonelyPageFrame" Content="Frame" HorizontalAlignment="Left" Height="622" Margin="213,29,0,0" VerticalAlignment="Top" Width="1101" NavigationUIVisibility="Hidden" Source="LonelyPage.xaml" Visibility="Hidden"/>
+            <Frame x:Name="addingSongsLoadingFrame" Content="Frame" HorizontalAlignment="Left" Height="622" Margin="213,29,0,0" VerticalAlignment="Top" Width="1101" NavigationUIVisibility="Hidden" Source="AddingSongLoadingPage.xaml" Visibility="Hidden"/>
             <Frame x:Name="aboutPageFrame" Content="Frame" HorizontalAlignment="Left" Height="622" Margin="213,29,0,0" VerticalAlignment="Top" Width="1101" NavigationUIVisibility="Hidden" Source="AboutPage.xaml" Visibility="Hidden"/>
             <Frame x:Name="settingPageFrame" Content="Frame" HorizontalAlignment="Left" Height="622" Margin="213,29,0,0" VerticalAlignment="Top" Width="1101" NavigationUIVisibility="Hidden" Source="SettingPage.xaml" Visibility="Hidden"/>
             <Frame x:Name="albumsPageFrame" Content="Frame" HorizontalAlignment="Left" Height="577" Margin="213,74,0,0" VerticalAlignment="Top" Width="1101" NavigationUIVisibility="Hidden" Source="AlbumsPage.xaml" Visibility="Hidden"/>

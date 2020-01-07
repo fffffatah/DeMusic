@@ -39,6 +39,7 @@ namespace DeMusic
             mainPageObj.prevButton.IsEnabled = state;
             mainPageObj.shuffleButton.IsEnabled = state;
             mainPageObj.repeatButton.IsEnabled = state;
+            mainPageObj.newPlaylistButton.IsEnabled = state;
         }
     }
 }

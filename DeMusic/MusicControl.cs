@@ -8,12 +8,13 @@ using NAudio.Wave.SampleProviders;
 
 namespace DeMusic
 {
-    class MusicControl
+    public class MusicControl
     {
         //NAUDIO VARIABLES
-        private WaveOutEvent outputDevice;
-        private AudioFileReader audioFile;
-        public void Play()
+        static WaveOutEvent outputDevice;
+        static AudioFileReader audioFile;
+        //THIS CONSTRUCTOR RECEIVES THE SONG LOCATION AND INITIALIZES THE AVOBE VARIABLES
+        public void SetSong(string song)
         {
             if (outputDevice == null)
             {
@@ -21,9 +22,12 @@ namespace DeMusic
             }
             if (audioFile == null)
             {
-                audioFile = new AudioFileReader(@"E:\Music\Air Supply - The Definitive Collection (FLAC)\02-All Out Of Love.flac");
+                audioFile = new AudioFileReader(song);
                 outputDevice.Init(audioFile);
             }
+        }
+        public void Play()
+        {
             outputDevice.Play();
         }
         public void Pause()

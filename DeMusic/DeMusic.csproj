@@ -65,6 +65,9 @@
     <Compile Include="AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AddingSongLoadingPage.xaml.cs">
+      <DependentUpon>AddingSongLoadingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AlbumsPage.xaml.cs">
       <DependentUpon>AlbumsPage.xaml</DependentUpon>
     </Compile>
@@ -93,6 +96,10 @@
     </Compile>
     <Compile Include="SettingPageLogic.cs" />
     <Page Include="AboutPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AddingSongLoadingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -229,6 +236,9 @@
   <ItemGroup>
     <Resource Include="Assets\repeatDisabledIcon.png" />
     <Resource Include="Assets\repeatEnabledIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\addDataDbLoadingGif.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

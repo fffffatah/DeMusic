@@ -21,6 +21,7 @@ namespace DeMusic
             {
                 mainPageObj.playButtonImage.Visibility = Visibility.Hidden;
                 mainPageObj.pauseButtonImage.Visibility = Visibility.Visible;
+                musicControl.SetSong(@"E:\Music\Air Supply - The Definitive Collection (FLAC)\02-All Out Of Love.flac");
                 musicControl.Play();
             }
             else if (mainPageObj.pauseButtonImage.Visibility == Visibility.Visible)
