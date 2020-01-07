@@ -217,10 +217,6 @@
       <Project>{8c91701b-32bb-467b-97a1-6f76b33f3def}</Project>
       <Name>FileIoOperation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SQLiteDatabaseOperation\SQLiteDatabaseOperation.csproj">
-      <Project>{65992095-5A38-4CAE-8EE2-E3F254C89B9D}</Project>
-      <Name>SQLiteDatabaseOperation</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\addDirectoryButtonIcon.png" />

@@ -11,19 +11,20 @@ namespace DeMusic
     public partial class ControlAllPageComponent
     {
         //THIS METHOD CHECKS FOR THE DB FILE IN APPDATA
-        public void CheckData()
+        public bool CheckData()
         {
             if (File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\DeMusic\songdatabase.db"))
             {
                 mainPageObj.lonelyPageFrame.Visibility = Visibility.Hidden;
                 ChangeButtonState(true);
+                return true;
             }
             else
             {
                 mainPageObj.lonelyPageFrame.Visibility = Visibility.Visible;
                 ChangeButtonState(false);
+                return false;
             }
-
         }
     }
 }

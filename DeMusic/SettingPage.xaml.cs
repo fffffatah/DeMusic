@@ -39,7 +39,7 @@ namespace DeMusic
 
         private void saveSettingButton_Click(object sender, RoutedEventArgs e)
         {
-
+            new ControlAllPageComponent(this).SaveDirectory();
         }
     }
 }
