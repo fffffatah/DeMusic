@@ -15,7 +15,7 @@
                           ShadowDepth="0" />
         </Border.Effect>
         <Grid Background="Black">
-            <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="95" Margin="0,651,0,0" VerticalAlignment="Top" Width="1314" Background="#FF1A1A1A">
+            <Canvas x:Name="musicControls" HorizontalAlignment="Left" Height="95" Margin="0,651,0,0" VerticalAlignment="Top" Width="1314" Background="#FF1A1A1A" UseLayoutRounding="True" SnapsToDevicePixels="True">
                 <Button x:Name="prevButton" Content="" Canvas.Left="582" Width="33" Canvas.Top="14" Click="prevButtonOnClick" Height="40" BorderThickness="0" Cursor="Hand">
                     <Button.Effect>
                         <DropShadowEffect/>
@@ -134,7 +134,7 @@
                 <Image x:Name="volumeSliderIcon" Height="17" Canvas.Left="1136" Canvas.Top="37" Width="18" Source="Assets/volumeSliderIcon.png"/>
                 <Image x:Name="bottomLeftAlbumArt" Height="75" Canvas.Left="10" Canvas.Top="10" Width="75" Source="Assets/noAlbumArtIcon.png"/>
                 <Label x:Name="songTitleBottomLabel" Content="Play some music ;)" Canvas.Left="90" Canvas.Top="10" Foreground="White" FontFamily="Dubai Medium" FontSize="14" Height="33" Width="261"/>
-                <Label x:Name="albumNameBottomLabel" Content="Unknown Album" Canvas.Left="90" Canvas.Top="48" Foreground="Gray" FontFamily="Dubai Medium" Width="261"/>
+                <Label x:Name="artistNameBottomLabel" Content="Unknown Artist" Canvas.Left="90" Canvas.Top="48" Foreground="Gray" FontFamily="Dubai Medium" Width="261"/>
                 <Image x:Name="shuffleDisabledIcon" Source="Assets\shuffleDisabledIcon.png" Canvas.Left="548" Canvas.Top="14" Height="40" Width="14">
                     <Image.Effect>
                         <DropShadowEffect/>
@@ -158,7 +158,7 @@
                 </Image>
                 <Button x:Name="repeatButton" Content="Button" Canvas.Left="720" Canvas.Top="14" Width="14" Height="40" BorderThickness="0" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}" Click="repeatButton_Click" Cursor="Hand" Opacity="0"/>
             </Canvas>
-            <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="651" VerticalAlignment="Top" Width="213" Background="#FF121212">
+            <Canvas x:Name="leftControls" HorizontalAlignment="Left" Height="651" VerticalAlignment="Top" Width="213" Background="#FF121212" UseLayoutRounding="True" SnapsToDevicePixels="True">
                 <Label x:Name="topRightDeMusicLabel" Content="DeMusic" Canvas.Left="25" Height="24" Foreground="White" Canvas.Top="3"/>
                 <Image x:Name="topRightLogo" Height="17" Canvas.Left="8" Canvas.Top="7" Width="17" RenderTransformOrigin="0.5,0.5" Source="Assets/Music.ico" Stretch="Fill" RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased"/>
                 <ListBox x:Name="playlistListBox" Height="363" Canvas.Top="241" Width="195" BorderThickness="0" Background="#FF121212" Canvas.Left="8">

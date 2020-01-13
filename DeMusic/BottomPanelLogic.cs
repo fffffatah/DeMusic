@@ -13,7 +13,7 @@ namespace DeMusic
     {
         //MUSIC CONTROL CLASS VARIABLE
         static MusicControl musicControl = new MusicControl();
-        //THIS MEHTOD SHOWS THE PLAY AND PAUSE BUTTON IMAGE ACCORDING TO MUSIC STATE
+        //THIS METHOD SHOWS THE PLAY AND PAUSE BUTTON IMAGE ACCORDING TO MUSIC STATE
         public void PlayPauseControl()
         {
 
