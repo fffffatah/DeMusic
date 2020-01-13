@@ -22,7 +22,7 @@ namespace DeMusic
             else
             {
                 mainPageObj.lonelyPageFrame.Visibility = Visibility.Visible;
-                ChangeButtonState(false);
+                ChangeButtonState(true);
                 return false;
             }
         }

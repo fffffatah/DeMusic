@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using FileIoOperation;
 using System.Windows.Controls;
 using System.Windows;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace DeMusic
 {
@@ -14,6 +15,7 @@ namespace DeMusic
         //MUSIC CONTROL CLASS VARIABLE
         static MusicControl musicControl = new MusicControl();
         //THIS MEHTOD SHOWS THE PLAY AND PAUSE BUTTON IMAGE ACCORDING TO MUSIC STATE
+        [TestMethod]
         public void PlayPauseControl()
         {
 
@@ -22,6 +24,10 @@ namespace DeMusic
                 mainPageObj.playButtonImage.Visibility = Visibility.Hidden;
                 mainPageObj.pauseButtonImage.Visibility = Visibility.Visible;
                 musicControl.SetSong(@"E:\Music\Air Supply - The Definitive Collection (FLAC)\02-All Out Of Love.flac");
+                Song song=new Song();
+                song.SetTags(@"E:\Music\Air Supply - The Definitive Collection (FLAC)\02-All Out Of Love.flac");
+                mainPageObj.songTitleBottomLabel.Content = song.SongTitle;
+                mainPageObj.artistNameBottomLabel.Content = song.AlbumArtist;
                 musicControl.Play();
             }
             else if (mainPageObj.pauseButtonImage.Visibility == Visibility.Visible)
