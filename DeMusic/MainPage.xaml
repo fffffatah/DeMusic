@@ -161,7 +161,7 @@
                                         </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                                <Setter Property="Foreground" Value="#FF5B9BD5" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -183,7 +183,7 @@
                                         </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                                <Setter Property="Foreground" Value="#FF5B9BD5" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -205,7 +205,7 @@
                                         </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                                <Setter Property="Foreground" Value="#FF5B9BD5" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
@@ -252,7 +252,7 @@
                                         </ContentControl>
                                         <ControlTemplate.Triggers>
                                             <Trigger Property="IsMouseOver" Value="True">
-                                                <Setter Property="Foreground" Value="Cyan" TargetName="Content" />
+                                                <Setter Property="Foreground" Value="#FF5B9BD5" TargetName="Content" />
                                             </Trigger>
                                         </ControlTemplate.Triggers>
                                     </ControlTemplate>
